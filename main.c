@@ -7,8 +7,8 @@
 struct stat stat1, stat2;
 struct tm *time1, *time2;
 
-void filestat1(char* file1);
-void filestat2(char* file2);
+void filestat1();
+void filestat2();
 void filetime1();
 void filetime2();
 void sizecmp();

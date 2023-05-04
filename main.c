@@ -17,17 +17,22 @@ void datecmp();
 void timecmp();
 
 int main(){
-    filestat1();
-    filestat2();
-    filetime1();
-    filetime2();
-    printf("size compare\n");
-    sizecmp();
-    printf("\n");
-    printf("block compare\n");
-    blockcmp();
-    datecmp();
-    timecmp();
+	filestat1();
+	filestat2();
+	filetime1();
+	filetime2();
+    
+	printf("size compare\n");
+	sizecmp();
+
+	printf("\nblock compare\n");
+	blockcmp();
+
+	printf("\ndate compare\n");
+	datecmp();
+
+	printf("\ntime compare\n");
+	timecmp();
 }
 
 //파일 1의 정보를 가져오는 함수 작성
@@ -54,7 +59,7 @@ void filetime2(){
 void sizecmp(){
 	if((int)stat1.st_size>(int)stat2.st_size)
 		printf("stat1 is bigger\n");
-	else if((int)stat.st_size==(int)stat2.st_size)
+	else if((int)stat1.st_size==(int)stat2.st_size)
 		printf("sizes are equal\n");
 	else
 		printf("stat2 is bigger\n");
@@ -64,7 +69,7 @@ void sizecmp(){
 void blockcmp(){
 	if((int)stat1.st_blocks>(int)stat2.st_blocks)
 		printf("stat1 is bigger\n");
-	else if((int)stat.st_blocks==(int)stat2.st_blocks)
+	else if((int)stat1.st_blocks==(int)stat2.st_blocks)
 		printf("sizes are equal\n");
 	else
 		printf("stat2 is bigger\n");
@@ -87,7 +92,7 @@ void datecmp() {
 			else if (time1->tm_mday < time2->tm_mday)
 				printf("text2 is early\n");
 			else
-				printf("same time\n");
+				printf("same date\n");
 		}
 	}
 }

@@ -7,8 +7,8 @@
 struct stat stat1, stat2;
 struct tm *time1, *time2;
 
-void filestat1();
-void filestat2();
+void filestat1(char* file1);
+void filestat2(char* file2);
 void filetime1();
 void filetime2();
 void sizecmp();
@@ -28,15 +28,13 @@ int main(){
 }
 
 //파일 1의 정보를 가져오는 함수 작성
-void filestat1(char * file1){
-    stat(file1, &stat1);
-    return;
+void filestat1(){
+	stat("text1", &stat1);
 }
 
 //파일 2의 정보를 가져오는 함수 작성
-void filestat2(char * file2){
-    stat(file2, &stat2);
-    return;
+void filestat2(){
+	stat("text2", &stat2);
 }
 
 //파일 1의 시간 정보를 가져오는 함수 작성

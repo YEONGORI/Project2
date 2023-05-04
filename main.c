@@ -28,13 +28,15 @@ int main(){
 }
 
 //파일 1의 정보를 가져오는 함수 작성
-void filestat1(){
-    
+void filestat1(char * file1){
+    stat(file1, &stat1);
+    return;
 }
 
 //파일 2의 정보를 가져오는 함수 작성
-void filestat2(){
-    
+void filestat2(char * file2){
+    stat(file2, &stat2);
+    return;
 }
 
 //파일 1의 시간 정보를 가져오는 함수 작성

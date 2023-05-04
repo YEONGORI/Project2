@@ -21,7 +21,10 @@ int main(){
     filestat2();
     filetime1();
     filetime2();
+    printf("size compare\n");
     sizecmp();
+    printf("\n");
+    printf("block compare\n");
     blockcmp();
     datecmp();
     timecmp();
@@ -50,21 +53,21 @@ void filetime2(){
 //두 개의 파일 크기를 비교하는 함수 작성
 void sizecmp(){
 	if((int)stat1.st_size>(int)stat2.st_size)
-		printf("size of stat1 is greater than size of stat2\n");
+		printf("stat1 is bigger\n");
 	else if((int)stat.st_size==(int)stat2.st_size)
-		printf("size of stat1 is equal with size of stat2\n");
+		printf("sizes are equal\n");
 	else
-		printf("size of stat1 is less than size of stat2\n");
+		printf("stat2 is bigger\n");
 }
 
 //두 개의 파일 블락 수를 비교하는 함수 작성
 void blockcmp(){
 	if((int)stat1.st_blocks>(int)stat2.st_blocks)
-		printf("block size of stat1 is greater than block size of stat2\n");
+		printf("stat1 is bigger\n");
 	else if((int)stat.st_blocks==(int)stat2.st_blocks)
-		printf("block size of stat1 is equal with block size of stat2\n");
+		printf("sizes are equal\n");
 	else
-		printf("block size of stat1 is less than block size of stat2\n");
+		printf("stat2 is bigger\n");
 }
 
 //두 개의 파일 수정 날짜를 비교하는 함수 작성
